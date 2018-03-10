@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-Primera = True
-
 import webapp
 
 contents = {
@@ -56,13 +54,8 @@ class contentApp(webapp.webApp):
 		return(request.split()[0], request.split()[1], request) #hacemos split una vez y me quedo con el primero
 
 	def process(self, parsedRequest): # parsedRequest es una tupla (metodo, recurso) de la peticion
-		#global Primera
 		exist = False
 		vacio = False
-
-		#if Primera:
-		#	read(contents)
-		#	Primera = False
 
 		method, recurso, peticion = parsedRequest
 		recurso = recurso.split("/")[1]			
